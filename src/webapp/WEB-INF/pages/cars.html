@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Car</title>
+    <style>table th, table td {
+        padding: 5px;
+    }</style>
+</head>
+
+<body>
+<table border="1">
+    <tr>
+        <th>Model</th>
+        <th>Manufactured Year</th>
+        <th>Engine Capacity</th>
+    </tr>
+
+    <tr th:each="lst : ${cars}">
+        <td th:utext="${lst.getModel()}">Model</td>
+        <td th:utext="${lst.getManufacturedYear()}">Manufactured Year</td>
+        <td th:utext="${lst.getEngineCapacity()}">Engine Capacity</td>
+    </tr>
+
+</table>
+
+</body>
+
+</html>
